@@ -1,5 +1,7 @@
 package ch03;
 
+import java.util.Stack;
+
 public class TestStack {
     public static void main(String[] args) {
 
@@ -19,5 +21,18 @@ public class TestStack {
         ms.toStr();
         System.out.println(ms.isEmpty());
         System.out.println(ms.isFull());
+
+        Stack<String> stack = new Stack<>();
+        stack.push("zhu");
+        stack.push("xin");
+        stack.push("wang");
+        System.out.println(stack.empty());
+        System.out.println(stack.search("zhu"));
+        while (!stack.isEmpty()){
+            System.out.println(stack.pop());
+        }
+
+        System.out.println(stack.empty());
+        System.out.println(stack.search("zhu"));
     }
 }
